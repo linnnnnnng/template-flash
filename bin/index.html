@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title></title>
+<link href="icon.gif" rel="shortcut icon">
+<meta property="og:image" content=""/>
+<meta name="description" content="" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2/swfobject.js"></script>
+
+<style>
+	html, body { width:100%; height:99.9%; background-color: #ffffff;}
+	body { margin:0; padding:0; min-height:700px; min-width:1200px; overflow:auto;}
+	#flashContent { width:100%; min-height:700px; height:100%;}
+</style>
+
+</head>
+<body>
+<div id="mainholder">
+     <div id="flashcontent">
+        <blockquote><p>In order to view this page you need JavaScript and Flash Player 10+ support. Click here to <a href="http://www.adobe.com/support/flash/downloads.html" target="_blank">download</a> flash.</p></blockquote>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+function loadFlash() {	
+	var uuid = swfobject.getQueryParamValue("uuid")
+	var flashvars = false;
+	var params = {allowFullScreen : true, allowScriptAccess: "always", wmode: "transparent", flashvars: "uuid=" + uuid};
+	var attributes = {id: "flash"};
+	swfobject.embedSWF("main.swf", "flashcontent", "550", "400", "10.0.0", "assets/swf/playerProductInstall.swf", flashvars, params, attributes);
+}
+loadFlash()
+</script>
